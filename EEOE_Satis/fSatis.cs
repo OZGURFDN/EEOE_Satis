@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EEOE_Satis
 {
-    public partial class txtMiktar : Form
+    public partial class form1 : Form
     {
-        public txtMiktar()
+        public form1()
         {
             InitializeComponent();
         }
