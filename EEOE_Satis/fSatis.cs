@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace EEOE_Satis
 {
-    public partial class fSatis : Form
+    public partial class txtMiktar : Form
     {
-        public fSatis()
+        public txtMiktar()
         {
             InitializeComponent();
+        }
+
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
