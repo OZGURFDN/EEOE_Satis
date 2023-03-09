@@ -80,7 +80,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="icon\remove.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="icon\tl_48.png" />
   </ItemGroup>
