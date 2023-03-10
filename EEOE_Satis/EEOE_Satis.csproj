@@ -86,5 +86,11 @@
   <ItemGroup>
     <None Include="icon\tl_48.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\kredikarti.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\kartnakit.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
