@@ -111,14 +111,15 @@
             this.button38 = new System.Windows.Forms.Button();
             this.button37 = new System.Windows.Forms.Button();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Barkod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UrunAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Barkod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UrunGrup = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Birim = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KdvOrani = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AlisFiyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fiyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Miktar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Toplam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KdvTutari = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AlisFiyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sil = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -274,14 +275,15 @@
             this.gridSatisListesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridSatisListesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridSatisListesi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Barkod,
             this.UrunAdi,
+            this.Barkod,
+            this.UrunGrup,
             this.Birim,
+            this.KdvOrani,
+            this.AlisFiyat,
             this.Fiyat,
             this.Miktar,
             this.Toplam,
-            this.KdvTutari,
-            this.AlisFiyat,
             this.Sil});
             this.gridSatisListesi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridSatisListesi.EnableHeadersVisualStyles = false;
@@ -1521,23 +1523,41 @@
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             this.dataGridViewImageColumn1.Width = 125;
             // 
-            // Barkod
-            // 
-            this.Barkod.HeaderText = "Barkod";
-            this.Barkod.MinimumWidth = 6;
-            this.Barkod.Name = "Barkod";
-            // 
             // UrunAdi
             // 
             this.UrunAdi.HeaderText = "Ürün Adı";
             this.UrunAdi.MinimumWidth = 6;
             this.UrunAdi.Name = "UrunAdi";
             // 
+            // Barkod
+            // 
+            this.Barkod.HeaderText = "Barkod";
+            this.Barkod.MinimumWidth = 6;
+            this.Barkod.Name = "Barkod";
+            // 
+            // UrunGrup
+            // 
+            this.UrunGrup.HeaderText = "Ürün Grup";
+            this.UrunGrup.MinimumWidth = 6;
+            this.UrunGrup.Name = "UrunGrup";
+            // 
             // Birim
             // 
             this.Birim.HeaderText = "Birim";
             this.Birim.MinimumWidth = 6;
             this.Birim.Name = "Birim";
+            // 
+            // KdvOrani
+            // 
+            this.KdvOrani.HeaderText = "Kdv Tutarı";
+            this.KdvOrani.MinimumWidth = 6;
+            this.KdvOrani.Name = "KdvOrani";
+            // 
+            // AlisFiyat
+            // 
+            this.AlisFiyat.HeaderText = "AlisFiyat";
+            this.AlisFiyat.MinimumWidth = 6;
+            this.AlisFiyat.Name = "AlisFiyat";
             // 
             // Fiyat
             // 
@@ -1556,20 +1576,6 @@
             this.Toplam.HeaderText = "Toplam";
             this.Toplam.MinimumWidth = 6;
             this.Toplam.Name = "Toplam";
-            // 
-            // KdvTutari
-            // 
-            this.KdvTutari.HeaderText = "Kdv Tutarı";
-            this.KdvTutari.MinimumWidth = 6;
-            this.KdvTutari.Name = "KdvTutari";
-            this.KdvTutari.Visible = false;
-            // 
-            // AlisFiyat
-            // 
-            this.AlisFiyat.HeaderText = "AlisFiyat";
-            this.AlisFiyat.MinimumWidth = 6;
-            this.AlisFiyat.Name = "AlisFiyat";
-            this.AlisFiyat.Visible = false;
             // 
             // Sil
             // 
@@ -1705,14 +1711,15 @@
         private System.Windows.Forms.TextBox txtOdenen;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox chSatisIadeIslemi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Barkod;
         private System.Windows.Forms.DataGridViewTextBoxColumn UrunAdi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Barkod;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UrunGrup;
         private System.Windows.Forms.DataGridViewTextBoxColumn Birim;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KdvOrani;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AlisFiyat;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fiyat;
         private System.Windows.Forms.DataGridViewTextBoxColumn Miktar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Toplam;
-        private System.Windows.Forms.DataGridViewTextBoxColumn KdvTutari;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AlisFiyat;
         private System.Windows.Forms.DataGridViewImageColumn Sil;
     }
 }

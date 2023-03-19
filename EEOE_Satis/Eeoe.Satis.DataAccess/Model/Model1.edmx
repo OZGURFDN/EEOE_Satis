@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="EeoeDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="EeoeDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Urun">
           <Key>
             <PropertyRef Name="UrunId" />
@@ -16,7 +16,7 @@
           <Property Name="UrunGrup" Type="nvarchar" MaxLength="50" />
           <Property Name="AlisFiyat" Type="float" />
           <Property Name="SatisFiyat" Type="float" />
-          <Property Name="KdvOrani" Type="int" />
+          <Property Name="KdvTutari" Type="int" />
           <Property Name="Birim" Type="nvarchar" MaxLength="50" />
           <Property Name="Miktar" Type="float" />
           <Property Name="Tarih" Type="datetime" />
@@ -25,8 +25,7 @@
         <EntityContainer Name="EeoeDbModelStoreContainer">
           <EntitySet Name="Urun" EntityType="Self.Urun" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="EeoeDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -46,6 +45,7 @@
           <Property Name="Miktar" Type="Double" />
           <Property Name="Tarih" Type="DateTime" Precision="3" />
           <Property Name="Kullanici" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KdvTutari" Type="Int32" />
         </EntityType>
         <EntityContainer Name="EeoeDbEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Urun" EntityType="Self.Urun" />
@@ -59,6 +59,7 @@
           <EntitySetMapping Name="Urun">
             <EntityTypeMapping TypeName="EeoeDbModel.Urun">
               <MappingFragment StoreEntitySet="Urun">
+                <ScalarProperty Name="KdvTutari" ColumnName="KdvTutari" />
                 <ScalarProperty Name="UrunId" ColumnName="UrunId" />
                 <ScalarProperty Name="Barkod" ColumnName="Barkod" />
                 <ScalarProperty Name="UrunAd" ColumnName="UrunAd" />
@@ -66,7 +67,6 @@
                 <ScalarProperty Name="UrunGrup" ColumnName="UrunGrup" />
                 <ScalarProperty Name="AlisFiyat" ColumnName="AlisFiyat" />
                 <ScalarProperty Name="SatisFiyat" ColumnName="SatisFiyat" />
-                <ScalarProperty Name="KdvOrani" ColumnName="KdvOrani" />
                 <ScalarProperty Name="Birim" ColumnName="Birim" />
                 <ScalarProperty Name="Miktar" ColumnName="Miktar" />
                 <ScalarProperty Name="Tarih" ColumnName="Tarih" />
